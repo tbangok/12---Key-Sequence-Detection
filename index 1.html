@@ -8,8 +8,17 @@
   </head>
   <body>
     <script>
-      window.addEventListener('keyup',)
-      console.log(e.key);
+      const pressed = [];
+      const secret = 'anhngok';
+      
+      window.addEventListener('keyup', (e) =>{
+      pressed.push(e.key);
+        pressed.splice(-secret.length-1,pressed.length-secret.length);
+        console.log(pressed);
+        if(pressed.join('').includes(secret)) {
+          cornify_add();
+        }
+      });
     </script>
   </body>
 </html>
